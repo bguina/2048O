@@ -1,4 +1,4 @@
-package fr.dlorine.android2048o;
+package dev.bguina.o2048;
 
 import android.content.Context;
 

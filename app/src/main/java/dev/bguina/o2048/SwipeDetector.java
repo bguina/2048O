@@ -1,4 +1,4 @@
-package fr.dlorine.android2048o;
+package dev.bguina.o2048;
 
 import android.view.MotionEvent;
 import android.view.VelocityTracker;
@@ -7,8 +7,6 @@ import android.view.ViewConfiguration;
 
 
 public class SwipeDetector implements View.OnTouchListener {
-    // Cached ViewConfiguration and system-wide constant values
-    private int mSlop;
     private int mMinFlingVelocity;
     private int mMaxFlingVelocity;
 

@@ -1,13 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 21
-    buildToolsVersion "20.0.0"
+    namespace "dev.bguina"
 
     defaultConfig {
-        applicationId "com.example.lolo.andro2048"
-        minSdkVersion 21
-        targetSdkVersion 21
+        minSdk 33
+        compileSdk 33
+        applicationId "dev.bguina.o2048"
         versionCode 1
         versionName "1.0"
     }
@@ -20,7 +19,5 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:recyclerview-v7:+'
-    compile 'com.android.support:appcompat-v7:21.0.0'
+    implementation('androidx.recyclerview:recyclerview:1.3.2')
 }

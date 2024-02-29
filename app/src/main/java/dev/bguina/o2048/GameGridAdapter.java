@@ -1,10 +1,14 @@
-package fr.dlorine.android2048o;
+package dev.bguina.o2048;
 
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import dev.bguina.R;
 
 public class GameGridAdapter extends RecyclerView.Adapter<GameGridAdapter.ViewHolder> implements SwipeListener {
     private Game mGame;
@@ -25,6 +29,7 @@ public class GameGridAdapter extends RecyclerView.Adapter<GameGridAdapter.ViewHo
         mGame = new Game();
     }
 
+    @NonNull
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.tile_layout, parent, false);
@@ -32,7 +37,7 @@ public class GameGridAdapter extends RecyclerView.Adapter<GameGridAdapter.ViewHo
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Integer tileNumber = mGame.getTileNumber(position);
         if (tileNumber == 0) {
             holder.mTileNumber.setBackgroundResource(Palette.TILES.get(tileNumber));

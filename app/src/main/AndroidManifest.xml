@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="fr.dlorine.android2048o" >
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
-        android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity
-            android:name="fr.dlorine.android2048o.GameActivity"
+            android:name="dev.bguina.o2048.GameActivity"
+            android:exported="true"
             android:label="@string/title_activity_game"
             android:screenOrientation="portrait">
             <intent-filter>
